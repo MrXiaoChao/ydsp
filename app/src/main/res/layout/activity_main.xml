@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/ll_menu"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#ffffff"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:id="@+id/tv_homepage"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_menu_homepage"
+            android:gravity="center"
+            android:text="首页"
+            android:textColor="@drawable/tv_menu_color"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_menu_message"
+            android:gravity="center"
+            android:text="消息"
+            android:textColor="@drawable/tv_menu_color"
+            android:textSize="12sp" />
+        <TextView
+            android:id="@+id/tv_personal"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="4dp"
+            android:layout_weight="1"
+            android:drawableTop="@drawable/tab_menu_mine"
+            android:gravity="center"
+            android:text="个人中心"
+            android:textColor="@drawable/tv_menu_color"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_div"
+        android:layout_width="match_parent"
+        android:layout_height="2px"
+        android:layout_above="@id/ll_menu"
+        android:background="#CCCCCC" />
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/view_div">
+    </FrameLayout>
+</RelativeLayout>

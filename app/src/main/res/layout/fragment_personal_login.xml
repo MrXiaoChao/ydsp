@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/appbackground"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <com.zity.ydsp.widegt.ClearEditText
+            android:layout_marginTop="40dp"
+            android:id="@+id/et_username"
+            android:textColor="@color/textcolorgay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/background_login"
+            android:hint="请输入用户名/手机号"
+            android:maxLength="20"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textSize="14sp"/>
+
+        <com.zity.ydsp.widegt.PasswordEditText
+            android:layout_marginTop="20dp"
+            android:id="@+id/et_password"
+            android:textColor="@color/textcolorgay"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/background_login"
+            android:hint="请输入密码"
+            android:maxLength="20"
+            android:inputType="textPassword"
+            android:paddingLeft="15dp"
+            android:paddingRight="20dp"
+            android:singleLine="true"
+            android:textSize="14sp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_message"
+            android:textColor="@color/textcolorred"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="15dp"
+            android:text="您输入的手机号码有误"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/btn_login"
+            android:layout_marginTop="23dp"
+            android:text="登录"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+        <RelativeLayout
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            
+            <TextView
+                android:id="@+id/tv_register"
+                android:textColor="@color/blue"
+                android:text="立即注册"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/tv_forgetpassword"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/textcolorblack"
+                android:text="忘记密码？"
+                android:textSize="13sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
