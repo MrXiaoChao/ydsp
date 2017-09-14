@@ -7,13 +7,25 @@
 
     <include layout="@layout/toolbar" />
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="修改邮箱"
+            android:textColor="@color/textcolorgay" />
+    </RelativeLayout>
+
     <View
         android:layout_width="match_parent"
         android:layout_height="2px"
-        android:layout_marginTop="20dp"
-        android:background="@color/underline"
-        android:focusable="true"
-        android:focusableInTouchMode="true" />
+        android:background="@color/underline" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,22 +43,24 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="新密码"
+                android:text="原邮箱"
                 android:textColor="@color/textcolorblack" />
 
             <EditText
-                android:id="@+id/edtxt"
+                android:id="@+id/edxt"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="85dp"
                 android:background="@null"
-                android:hint="请输入新密码"
+                android:hint="请输入原邮箱"
                 android:maxLength="20"
                 android:textColor="@color/textcolorgay"
                 android:textSize="14sp" />
         </LinearLayout>
+
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -69,7 +83,47 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:text="确认密码"
+                android:text="新邮箱"
+                android:textColor="@color/textcolorblack" />
+
+            <EditText
+                android:id="@+id/edtxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="85dp"
+                android:background="@null"
+                android:hint="请输入新邮箱"
+                android:maxLength="20"
+                android:textColor="@color/textcolorgay"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="44dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2px"
+            android:layout_marginLeft="15dp"
+            android:background="@color/underline" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:text="确认邮箱"
                 android:textColor="@color/textcolorblack" />
 
             <EditText
@@ -79,11 +133,12 @@
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="85dp"
                 android:background="@null"
-                android:hint="请再次输入新密码"
+                android:hint="请再次输入新邮箱"
                 android:maxLength="20"
                 android:textColor="@color/textcolorgay"
                 android:textSize="14sp" />
         </LinearLayout>
+
     </LinearLayout>
 
     <View
@@ -92,23 +147,23 @@
         android:background="@color/underline" />
 
     <TextView
-        android:layout_marginTop="8dp"
-        android:textColor="@color/textcolorred"
-        android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="该手机号码已经存在！" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:text="该手机号码已经存在！"
+        android:textColor="@color/textcolorred" />
 
     <Button
         android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/btn_login"
         android:layout_marginTop="25dp"
+        android:background="@drawable/btn_login"
         android:text="确认"
-        android:textSize="16sp"
         android:textColor="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="16sp" />
 
 </LinearLayout>

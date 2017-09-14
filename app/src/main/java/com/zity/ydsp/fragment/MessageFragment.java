@@ -5,8 +5,8 @@ import com.zity.ydsp.R;
 import com.zity.ydsp.base.BaseFragment;
 
 /**
- * 我的
- * Created by luochao on 2017/7/18.
+ * 消息
+ * Created by luochao on 2017/9/18.
  */
 
 public class MessageFragment extends BaseFragment {

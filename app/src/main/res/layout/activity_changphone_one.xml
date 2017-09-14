@@ -7,13 +7,33 @@
 
     <include layout="@layout/toolbar" />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="@color/textcolorgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="当前手机号码为：" />
+
+        <TextView
+            android:textColor="@color/textcolorgay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:text="4728642398462" />
+    </LinearLayout>
     <View
         android:layout_width="match_parent"
         android:layout_height="2px"
-        android:layout_marginTop="20dp"
-        android:background="@color/underline"
-        android:focusable="true"
-        android:focusableInTouchMode="true" />
+        android:background="@color/underline" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -120,23 +140,23 @@
         android:background="@color/underline" />
 
     <TextView
-        android:layout_marginTop="8dp"
-        android:textColor="@color/textcolorred"
-        android:layout_marginLeft="15dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="该手机号码已经存在！" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:text="该手机号码已经存在！"
+        android:textColor="@color/textcolorred" />
 
     <Button
         android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginRight="15dp"
-        android:background="@drawable/btn_login"
         android:layout_marginTop="25dp"
+        android:background="@drawable/btn_login"
         android:text="下一步"
-        android:textSize="16sp"
         android:textColor="@color/white"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:textSize="16sp" />
 
 </LinearLayout>

@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+
     <application
         android:name=".app.App"
         android:allowBackup="true"
@@ -29,6 +30,13 @@
 
         <activity android:name=".activity.ForgetPasswordActivity" />
         <activity android:name=".activity.ForgetPasswordTwoActivity" />
+        <activity android:name=".activity.PersonalInfoActivity" />
+        <activity android:name=".activity.ChangPhoneOneActivity" />
+        <activity android:name=".activity.ChangPhoneTwoActivity" />
+        <activity android:name=".activity.ChangPasswordActivity" />
+        <activity android:name=".activity.ChangEmailActivity" />
+        <activity android:name=".activity.ChangAddressActivity" />
+        <activity android:name=".activity.ChangSexActivity" />
     </application>
 
 </manifest>
