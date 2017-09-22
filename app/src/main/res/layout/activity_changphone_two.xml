@@ -35,7 +35,8 @@
                 android:textColor="@color/textcolorblack" />
 
             <EditText
-                android:id="@+id/edtxt"
+                android:inputType="number"
+                android:id="@+id/et_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="30dp"
@@ -73,7 +74,8 @@
                 android:textColor="@color/textcolorblack" />
 
             <EditText
-                android:id="@+id/editxt"
+                android:inputType="number"
+                android:id="@+id/et_confirm_phone"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
@@ -91,12 +93,13 @@
         android:background="@color/underline" />
 
     <TextView
-        android:layout_marginTop="8dp"
-        android:textColor="@color/textcolorred"
-        android:layout_marginLeft="15dp"
+        android:visibility="invisible"
+        android:id="@+id/tv_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="该手机号码已经存在！" />
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/textcolorred" />
 
     <Button
         android:id="@+id/btn_login"

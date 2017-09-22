@@ -24,6 +24,7 @@
                 android:orientation="vertical">
 
                 <ImageView
+                    android:id="@+id/iv_touxiang"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -31,27 +32,28 @@
                     android:src="@drawable/touxiang" />
 
                 <TextView
+                    android:id="@+id/tv_name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="10dp"
-                    android:text="张泽天"
                     android:textColor="@color/white" />
 
                 <TextView
+                    android:id="@+id/tv_username"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="5dp"
                     android:background="@drawable/yhbq"
                     android:gravity="center"
-                    android:text="个人用户"
                     android:textColor="@color/white"
                     android:textSize="11sp" />
 
             </LinearLayout>
 
             <RelativeLayout
+                android:id="@+id/rl_mycase"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="20dp"
@@ -130,6 +132,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rl_mysugess"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="10dp"
@@ -209,6 +212,7 @@
             </RelativeLayout>
 
             <RelativeLayout
+                android:id="@+id/rl_relogin"
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginBottom="120dp"

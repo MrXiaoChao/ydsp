@@ -53,6 +53,7 @@
         </LinearLayout>
 
         <TextView
+            android:visibility="invisible"
             android:id="@+id/tv_message"
             android:textColor="@color/textcolorred"
             android:layout_marginTop="8dp"

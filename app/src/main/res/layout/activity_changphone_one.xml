@@ -23,12 +23,12 @@
             android:text="当前手机号码为：" />
 
         <TextView
+            android:id="@+id/tv_phone"
             android:textColor="@color/textcolorgay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginLeft="5dp"
-            android:text="4728642398462" />
+            android:layout_marginLeft="5dp" />
     </LinearLayout>
     <View
         android:layout_width="match_parent"
@@ -59,7 +59,8 @@
                     android:textColor="@color/textcolorblack" />
 
                 <EditText
-                    android:id="@+id/editText"
+                    android:inputType="number"
+                    android:id="@+id/et_phone"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="15dp"
@@ -86,6 +87,7 @@
                     android:background="@color/underline" />
 
                 <TextView
+                    android:id="@+id/btn_yzm"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_vertical"
@@ -122,7 +124,8 @@
                 android:textColor="@color/textcolorblack" />
 
             <EditText
-                android:id="@+id/editxt"
+                android:inputType="number"
+                android:id="@+id/et_duanxin"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginLeft="15dp"
@@ -140,11 +143,12 @@
         android:background="@color/underline" />
 
     <TextView
+        android:visibility="invisible"
+        android:id="@+id/tv_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="15dp"
         android:layout_marginTop="8dp"
-        android:text="该手机号码已经存在！"
         android:textColor="@color/textcolorred" />
 
     <Button

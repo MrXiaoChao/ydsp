@@ -25,7 +25,7 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white">
 
                 <EditText
@@ -44,7 +44,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -81,7 +81,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -118,7 +118,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -143,7 +143,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -168,7 +168,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -193,7 +193,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -242,7 +242,7 @@
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -267,7 +267,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -295,7 +295,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -346,7 +346,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
+                android:layout_height="45dp"
                 android:background="@color/white"
                 android:orientation="vertical">
 
@@ -380,7 +380,7 @@
                 android:layout_marginRight="15dp"
                 android:background="@drawable/btn_login"
                 android:layout_marginTop="33dp"
-                android:layout_marginBottom="20dp"
+                android:layout_marginBottom="40dp"
                 android:text="注册"
                 android:textSize="16sp"
                 android:textColor="@color/white"

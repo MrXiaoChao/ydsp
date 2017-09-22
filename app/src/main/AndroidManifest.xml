@@ -15,15 +15,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activity.LoginActivity">
+        <activity android:name=".activity.MainActivity"
+            android:launchMode="singleTop"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
 
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.LoginActivity" />
         <activity
             android:name=".activity.RegisterActivity"
             android:windowSoftInputMode="adjustPan|stateHidden" />
@@ -32,11 +35,18 @@
         <activity android:name=".activity.ForgetPasswordTwoActivity" />
         <activity android:name=".activity.PersonalInfoActivity" />
         <activity android:name=".activity.ChangPhoneOneActivity" />
-        <activity android:name=".activity.ChangPhoneTwoActivity" />
+        <activity android:name=".activity.ChangPhoneTwoActivity"
+            android:launchMode="singleTop"/>
         <activity android:name=".activity.ChangPasswordActivity" />
         <activity android:name=".activity.ChangEmailActivity" />
         <activity android:name=".activity.ChangAddressActivity" />
         <activity android:name=".activity.ChangSexActivity" />
+        <activity android:name=".activity.MyCaseActivity" />
+        <activity android:name=".activity.MySuggestActivity" />
+        <activity android:name=".activity.PersionalServiceActivity" />
+        <activity android:name=".activity.CorporationServiceActivity" />
+        <activity android:name=".activity.SuggestXqActivity" />
+        <activity android:name=".activity.MakeSuggestActivity" />
     </application>
 
 </manifest>

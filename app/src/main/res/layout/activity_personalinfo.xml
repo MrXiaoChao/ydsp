@@ -33,12 +33,12 @@
                 android:textColor="@color/textcolorblack" />
 
             <TextView
+                android:id="@+id/tv_username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:text="行政许可"
                 android:textColor="@color/textcolorgay" />
         </RelativeLayout>
 
@@ -68,12 +68,12 @@
                 android:textColor="@color/textcolorblack" />
 
             <TextView
+                android:id="@+id/tv_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:text="刘汉江"
                 android:textColor="@color/textcolorgay" />
         </RelativeLayout>
 
@@ -104,14 +104,12 @@
                 android:textColor="@color/textcolorblack" />
 
             <TextView
+                android:id="@+id/tv_gender"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:drawablePadding="5dp"
-                android:drawableRight="@drawable/jiantou"
-                android:text="男"
                 android:textColor="@color/textcolorgay" />
         </RelativeLayout>
 
@@ -141,12 +139,12 @@
                 android:textColor="@color/textcolorblack" />
 
             <TextView
+                android:id="@+id/tv_idcard"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:text="216371318336"
                 android:textColor="@color/textcolorgay" />
         </RelativeLayout>
 
@@ -183,14 +181,12 @@
                 android:textColor="@color/textcolorblack" />
 
             <TextView
+                android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:drawablePadding="5dp"
-                android:drawableRight="@drawable/jiantou"
-                android:text="shwfhl@qq.com"
                 android:textColor="@color/textcolorgay" />
         </RelativeLayout>
 
@@ -221,15 +217,14 @@
                 android:textColor="@color/textcolorblack" />
 
             <TextView
+                android:id="@+id/tv_address"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
                 android:layout_marginRight="15dp"
-                android:drawablePadding="5dp"
-                android:drawableRight="@drawable/jiantou"
-                android:text="北京市三里屯社区"
-                android:textColor="@color/textcolorgay" />
+                android:textColor="@color/textcolorgay"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp" />
         </RelativeLayout>
     </LinearLayout>
 
@@ -265,6 +260,7 @@
                 android:textColor="@color/textcolorblack" />
 
             <TextView
+                android:id="@+id/tv_phone"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBaseline="@+id/textView"
@@ -274,7 +270,6 @@
                 android:layout_marginRight="15dp"
                 android:drawablePadding="5dp"
                 android:drawableRight="@drawable/jiantou"
-                android:text="1378923891"
                 android:textColor="@color/textcolorgay" />
         </RelativeLayout>
 

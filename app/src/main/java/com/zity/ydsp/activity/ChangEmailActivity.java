@@ -36,12 +36,6 @@ public class ChangEmailActivity extends BaseActivity {
         tvTooltarTitle.setText("修改邮箱");
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: add setContentView(...) invocation
-        ButterKnife.bind(this);
-    }
 
     @OnClick({R.id.iv_toolbar_back, R.id.btn_login})
     public void onClick(View view) {
