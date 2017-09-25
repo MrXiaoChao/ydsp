@@ -15,6 +15,7 @@ import com.blankj.utilcode.utils.StringUtils;
 import com.blankj.utilcode.utils.ToastUtils;
 import com.zity.ydsp.R;
 import com.zity.ydsp.activity.LoginActivity;
+import com.zity.ydsp.activity.MyAppealActivity;
 import com.zity.ydsp.activity.MyCaseActivity;
 import com.zity.ydsp.activity.MySuggestActivity;
 import com.zity.ydsp.activity.PersonalInfoActivity;
@@ -54,6 +55,8 @@ public class PersonalFragment extends BaseFragment {
     TextView tvUsername;
     @BindView(R.id.iv_touxiang)
     ImageView ivTouxiang;
+    @BindView(R.id.rl_myappeal)
+    RelativeLayout rlMyappeal;
     private String name;
 
     @Override
@@ -94,7 +97,7 @@ public class PersonalFragment extends BaseFragment {
     }
 
 
-    @OnClick({R.id.iv_toolbar_back, R.id.rl_personalinfo, R.id.rl_mycase, R.id.rl_mysugess, R.id.rl_relogin})
+    @OnClick({R.id.iv_toolbar_back, R.id.rl_personalinfo, R.id.rl_mycase, R.id.rl_mysugess, R.id.rl_relogin,R.id.rl_myappeal})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.iv_toolbar_back:
@@ -133,6 +136,15 @@ public class PersonalFragment extends BaseFragment {
                 }else {
                     showExitDialog("请您去登录");
                 }
+                break;
+            case R.id.rl_myappeal:
+                if (EmptyUtils.isNotEmpty(name)) {
+                    Intent intent =new Intent(getActivity(), MyAppealActivity.class);
+                    startActivity(intent);
+                }else {
+                    showExitDialog("请您去登录");
+                }
+
                 break;
         }
     }

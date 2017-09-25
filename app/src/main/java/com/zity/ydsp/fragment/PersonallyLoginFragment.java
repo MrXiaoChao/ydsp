@@ -19,6 +19,7 @@ import com.zity.ydsp.activity.MainActivity;
 import com.zity.ydsp.activity.RegisterActivity;
 import com.zity.ydsp.app.App;
 import com.zity.ydsp.base.BaseFragment;
+import com.zity.ydsp.bean.MsUserid;
 import com.zity.ydsp.bean.User;
 import com.zity.ydsp.http.GsonRequest;
 import com.zity.ydsp.http.UrlPath;
@@ -122,11 +123,35 @@ public class PersonallyLoginFragment extends BaseFragment {
                     SPUtils.put(getActivity(),"phone",response.get(0).getPhone());
                     SPUtils.put(getActivity(),"name",response.get(0).getName());
                     SPUtils.put(getActivity(),"person_flag",response.get(0).getPerson_flag());
+                    //获取民生互动id
+                    getMshdId(response.get(0).getPhone());
+
                     Intent intent_login = new Intent(getActivity(), MainActivity.class);
                     startActivity(intent_login);
                     getActivity().finish();
                 } else {
                     ToastUtils.showShortToast("账号密码错误");
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+        });
+        App.getInstance().getHttpQueue().add(request);
+    }
+
+    //获取民生网用户id
+    private void getMshdId(String phone){
+        Map<String,String> map =new HashMap<>();
+        map.put("phone",phone);
+        GsonRequest<MsUserid> request =new GsonRequest<MsUserid>(Request.Method.POST, map, UrlPath.MSHD, MsUserid.class, new Response.Listener<MsUserid>() {
+            @Override
+            public void onResponse(MsUserid response) {
+                if (response!=null){
+                    String mshdid = response.getUser_id();
+                    SPUtils.put(getActivity(),"mshdid",mshdid);
                 }
             }
         }, new Response.ErrorListener() {

@@ -61,5 +61,6 @@ dependencies {
     //eventbus
     compile 'org.greenrobot:eventbus:3.0.0'
 
-
+    //视频播放器
+    compile project(':jcvideoplayer')
 }

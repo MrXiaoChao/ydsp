@@ -47,6 +47,15 @@
         <activity android:name=".activity.CorporationServiceActivity" />
         <activity android:name=".activity.SuggestXqActivity" />
         <activity android:name=".activity.MakeSuggestActivity" />
+        <activity android:name=".activity.MshdActivity" />
+        <activity android:name=".activity.PublicServiceActivity" />
+        <activity android:name=".activity.PublicService1Activity" />
+        <activity android:name=".activity.WebViewActivity" />
+        <activity android:name=".activity.AppealActivity" />
+        <activity android:name=".activity.CommonActivity" />
+        <activity android:name=".activity.MyAppealActivity" />
+        <activity android:name=".activity.ProgressInfoActivity" />
+        <activity android:name=".activity.MakeCommentActivity" />
     </application>
 
 </manifest>

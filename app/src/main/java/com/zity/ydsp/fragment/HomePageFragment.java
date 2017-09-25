@@ -1,15 +1,13 @@
 package com.zity.ydsp.fragment;
 
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +21,7 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
 import com.zity.ydsp.R;
 import com.zity.ydsp.activity.CorporationServiceActivity;
+import com.zity.ydsp.activity.MshdActivity;
 import com.zity.ydsp.activity.PersionalServiceActivity;
 import com.zity.ydsp.adapter.HomePageAdapter;
 import com.zity.ydsp.app.App;
@@ -38,9 +37,7 @@ import java.util.List;
 import java.util.Map;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
-import butterknife.Unbinder;
 
 /**
  * 首页
@@ -68,7 +65,9 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
     TextView tvPersionalMore;
     @BindView(R.id.tv_corporation_more)
     TextView tvCorporationMore;
-    Unbinder unbinder;
+    @BindView(R.id.iv_mshd)
+    ImageView ivMshd;
+    private ProgressDialog progressDialog;
 
 
     @Override
@@ -78,6 +77,7 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
 
     @Override
     protected void initData() {
+        setProgress();
         images.add("http://pic6.nipic.com/20100422/3017209_194429223521_2.jpg");
         images.add("http://image.tianjimedia.com/uploadImages/2015/131/41/5CI8TD94WZ10.jpg");
         images.add("http://image.fvideo.cn/uploadfile/2015/05/25/img37533071189339.jpg");
@@ -122,17 +122,20 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
     }
 
 
-
-    @OnClick({R.id.tv_persional_more, R.id.tv_corporation_more})
+    @OnClick({R.id.tv_persional_more, R.id.tv_corporation_more, R.id.iv_mshd})
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.tv_persional_more:
-                Intent intent_persional =new Intent(getActivity(), PersionalServiceActivity.class);
+                Intent intent_persional = new Intent(getActivity(), PersionalServiceActivity.class);
                 startActivity(intent_persional);
                 break;
             case R.id.tv_corporation_more:
-                Intent intent_corporation=new Intent(getActivity(), CorporationServiceActivity.class);
+                Intent intent_corporation = new Intent(getActivity(), CorporationServiceActivity.class);
                 startActivity(intent_corporation);
+                break;
+            case R.id.iv_mshd:
+                Intent intent_mshd =new Intent(getActivity(), MshdActivity.class);
+                startActivity(intent_mshd);
                 break;
         }
     }
@@ -158,7 +161,10 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
                 if (response.get(0).getList().size() > 0) {
                     HomePageAdapter adapter = new HomePageAdapter(getActivity(), response.get(0).getList());
                     rvPersional.setAdapter(adapter);
+                }else {
+
                 }
+                cancelProgress();
             }
         }, new Response.ErrorListener() {
             @Override
@@ -190,5 +196,16 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
             }
         });
         App.getInstance().getHttpQueue().add(request);
+    }
+
+    private void setProgress() {
+        progressDialog = new ProgressDialog(mContext);
+        progressDialog.setMessage("正在加载中...");
+        progressDialog.setCancelable(true);
+        progressDialog.show();
+    }
+
+    private void cancelProgress() {
+        progressDialog.dismiss();
     }
 }
