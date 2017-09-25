@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/layout-v11/notification_template_big_media.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_narrow.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/layout-v11/notification_template_big_media_narrow.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_media_cancel_action.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/layout-v11/notification_media_cancel_action.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_narrow_custom.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/layout-v11/notification_template_big_media_narrow_custom.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_media_action.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/layout-v11/notification_media_action.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/layout-v11/notification_template_big_media_custom.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/layout-v11/notification_template_big_media_custom.xml"
+    }
+]

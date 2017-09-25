@@ -1,0 +1,50 @@
+[
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_slide_in_top.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_slide_in_top.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_fade_out.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_fade_out.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_grow_fade_in_from_bottom.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_grow_fade_in_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_popup_exit.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_popup_exit.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_shrink_fade_out_from_bottom.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_shrink_fade_out_from_bottom.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/start_fullscreen.xml",
+        "source": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/src/main/res/anim/start_fullscreen.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/quit_fullscreen.xml",
+        "source": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/src/main/res/anim/quit_fullscreen.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_slide_out_bottom.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_slide_out_bottom.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_slide_out_top.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_slide_out_top.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_slide_in_bottom.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_slide_in_bottom.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_fade_in.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_fade_in.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/release/anim/abc_popup_enter.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/anim/abc_popup_enter.xml"
+    }
+]

@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_edit_text_material.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/drawable-v21/abc_edit_text_material.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_action_bar_item_background_material.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/drawable-v21/abc_action_bar_item_background_material.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_btn_colored_material.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/drawable-v21/abc_btn_colored_material.xml"
+    },
+    {
+        "merged": "/Users/luochao/Androidwork/AndroidYdsp/ydsp/jcvideoplayer/build/intermediates/res/merged/androidTest/debug/drawable-v21/notification_action_background.xml",
+        "source": "/Users/luochao/.android/build-cache/18d121a8a3ed8c8c851fca2354d7e5451710d9c7/output/res/drawable-v21/notification_action_background.xml"
+    }
+]
