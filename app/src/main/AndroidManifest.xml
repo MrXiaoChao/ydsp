@@ -15,9 +15,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".activity.MainActivity"
-            android:launchMode="singleTop"
-            >
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTop">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -35,8 +35,9 @@
         <activity android:name=".activity.ForgetPasswordTwoActivity" />
         <activity android:name=".activity.PersonalInfoActivity" />
         <activity android:name=".activity.ChangPhoneOneActivity" />
-        <activity android:name=".activity.ChangPhoneTwoActivity"
-            android:launchMode="singleTop"/>
+        <activity
+            android:name=".activity.ChangPhoneTwoActivity"
+            android:launchMode="singleTop" />
         <activity android:name=".activity.ChangPasswordActivity" />
         <activity android:name=".activity.ChangEmailActivity" />
         <activity android:name=".activity.ChangAddressActivity" />
@@ -56,6 +57,9 @@
         <activity android:name=".activity.MyAppealActivity" />
         <activity android:name=".activity.ProgressInfoActivity" />
         <activity android:name=".activity.MakeCommentActivity" />
+        <activity
+            android:name=".activity.GrbsActivity"
+            android:windowSoftInputMode="adjustPan" />
     </application>
 
 </manifest>

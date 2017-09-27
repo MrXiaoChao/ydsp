@@ -2,17 +2,13 @@ package com.zity.ydsp.fragment;
 
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.blankj.utilcode.utils.EmptyUtils;
 import com.blankj.utilcode.utils.StringUtils;
-import com.blankj.utilcode.utils.ToastUtils;
 import com.zity.ydsp.R;
 import com.zity.ydsp.activity.LoginActivity;
 import com.zity.ydsp.activity.MyAppealActivity;
@@ -24,7 +20,6 @@ import com.zity.ydsp.utils.SPUtils;
 import com.zity.ydsp.widegt.MyDialog;
 
 import butterknife.BindView;
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 

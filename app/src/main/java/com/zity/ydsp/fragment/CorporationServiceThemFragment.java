@@ -1,13 +1,17 @@
 package com.zity.ydsp.fragment;
 
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.google.gson.reflect.TypeToken;
 import com.zity.ydsp.R;
+import com.zity.ydsp.activity.GrbsActivity;
+import com.zity.ydsp.adapter.HomePageAdapter;
 import com.zity.ydsp.adapter.PersionalServiceAdapter;
 import com.zity.ydsp.app.App;
 import com.zity.ydsp.base.BaseFragment;
@@ -50,10 +54,19 @@ public class CorporationServiceThemFragment extends BaseFragment {
         map.put("flag", "0");
         final GsonRequest<List<HomePageImageUrl>> request = new GsonRequest<List<HomePageImageUrl>>(Request.Method.POST, map, UrlPath.CORPORATION_MORE, type, new Response.Listener<List<HomePageImageUrl>>() {
             @Override
-            public void onResponse(List<HomePageImageUrl> response) {
+            public void onResponse(final List<HomePageImageUrl> response) {
                 if (response.get(0).getList().size() > 0) {
                     PersionalServiceAdapter adapter = new PersionalServiceAdapter(getActivity(), response.get(0).getList());
                     rvPersionalserviceThem.setAdapter(adapter);
+                    adapter.setClickListener(new HomePageAdapter.OnItemClickListener() {
+                        @Override
+                        public void onClick(View view, int position) {
+                            Intent intent = new Intent(getActivity(), GrbsActivity.class);
+                            intent.putExtra("titleId", response.get(0).getList().get(position).getI_d());
+                            intent.putExtra("flag", "法人");
+                            startActivity(intent);
+                        }
+                    });
                 }
             }
         }, new Response.ErrorListener() {

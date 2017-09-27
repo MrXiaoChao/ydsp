@@ -21,6 +21,7 @@ import com.youth.banner.BannerConfig;
 import com.youth.banner.loader.ImageLoader;
 import com.zity.ydsp.R;
 import com.zity.ydsp.activity.CorporationServiceActivity;
+import com.zity.ydsp.activity.GrbsActivity;
 import com.zity.ydsp.activity.MshdActivity;
 import com.zity.ydsp.activity.PersionalServiceActivity;
 import com.zity.ydsp.adapter.HomePageAdapter;
@@ -68,6 +69,8 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
     @BindView(R.id.iv_mshd)
     ImageView ivMshd;
     private ProgressDialog progressDialog;
+    private HomePageAdapter adapter;
+    private List<HomePageImageUrl.ListBean> list;
 
 
     @Override
@@ -113,6 +116,8 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
         //处理滑动冲突
         rvCorporation.setNestedScrollingEnabled(false);
 
+        //recyclerview的item的点击事件
+
     }
 
     //下拉刷新
@@ -134,7 +139,7 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
                 startActivity(intent_corporation);
                 break;
             case R.id.iv_mshd:
-                Intent intent_mshd =new Intent(getActivity(), MshdActivity.class);
+                Intent intent_mshd = new Intent(getActivity(), MshdActivity.class);
                 startActivity(intent_mshd);
                 break;
         }
@@ -159,11 +164,21 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
             @Override
             public void onResponse(List<HomePageImageUrl> response) {
                 if (response.get(0).getList().size() > 0) {
-                    HomePageAdapter adapter = new HomePageAdapter(getActivity(), response.get(0).getList());
+                    list = response.get(0).getList();
+                    adapter = new HomePageAdapter(getActivity(), response.get(0).getList());
                     rvPersional.setAdapter(adapter);
-                }else {
+                } else {
 
                 }
+                adapter.setClickListener(new HomePageAdapter.OnItemClickListener() {
+                    @Override
+                    public void onClick(View view, int position) {
+                        Intent intent = new Intent(getActivity(), GrbsActivity.class);
+                        intent.putExtra("titleId", list.get(position).getI_d());
+                        intent.putExtra("flag", "个人");
+                        startActivity(intent);
+                    }
+                });
                 cancelProgress();
             }
         }, new Response.ErrorListener() {
@@ -183,11 +198,23 @@ public class HomePageFragment extends BaseFragment implements SwipeRefreshLayout
         map.put("flag", "0");
         final GsonRequest<List<HomePageImageUrl>> request = new GsonRequest<List<HomePageImageUrl>>(Request.Method.POST, map, UrlPath.PERSION_THEM, type, new Response.Listener<List<HomePageImageUrl>>() {
             @Override
-            public void onResponse(List<HomePageImageUrl> response) {
+            public void onResponse(final List<HomePageImageUrl> response) {
                 if (response.get(0).getList().size() > 0) {
                     HomePageAdapter adapter = new HomePageAdapter(getActivity(), response.get(0).getList());
                     rvCorporation.setAdapter(adapter);
+
+                    adapter.setClickListener(new HomePageAdapter.OnItemClickListener() {
+                        @Override
+                        public void onClick(View view, int position) {
+                            Intent intent = new Intent(getActivity(), GrbsActivity.class);
+                            intent.putExtra("titleId", response.get(0).getList().get(position).getI_d());
+                            intent.putExtra("flag", "法人");
+                            startActivity(intent);
+                        }
+                    });
                 }
+
+
             }
         }, new Response.ErrorListener() {
             @Override

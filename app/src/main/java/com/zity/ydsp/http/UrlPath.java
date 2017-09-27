@@ -33,6 +33,16 @@ public class UrlPath {
     public static String CHANG_PHONE = BaseUrl + "/person/changePhoneByApp.do?";
     //获取个人信息
     public static String PERSIONAL_INFO = BaseUrl + "/person/getPersonByIdApp.do?";
+    //获取个人办事列表
+    public static String GRBS=BaseUrl+"/reporting/itemByApp.do?";
+
+    //获取部门办事列表
+    public static String BMBS=BaseUrl+"/reporting/itemByApp.do?";
+
+
+
+
+
 
 
     //民生互动模块

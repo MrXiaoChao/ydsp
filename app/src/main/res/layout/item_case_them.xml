@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
     <LinearLayout
+        android:id="@+id/ll_image"
         android:background="@drawable/persional_service"
         android:orientation="horizontal"
         android:gravity="center"

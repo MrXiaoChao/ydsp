@@ -1,16 +1,22 @@
 package com.zity.ydsp.fragment;
 
+import android.content.Intent;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.View;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.google.gson.reflect.TypeToken;
 import com.zity.ydsp.R;
+import com.zity.ydsp.activity.GrbsActivity;
+import com.zity.ydsp.adapter.HomePageAdapter;
 import com.zity.ydsp.adapter.PersionalServiceAdapter;
+import com.zity.ydsp.adapter.PersionalServiceAdapter1;
 import com.zity.ydsp.app.App;
 import com.zity.ydsp.base.BaseFragment;
+import com.zity.ydsp.bean.ClassImager;
 import com.zity.ydsp.bean.HomePageImageUrl;
 import com.zity.ydsp.http.GsonRequest;
 import com.zity.ydsp.http.UrlPath;
@@ -44,14 +50,25 @@ public class CorporationServiceClassFragment extends BaseFragment{
 
     //从服务器获取部门办事图标及标题
     private void getPersionalImageFromService() {
-        TypeToken type = new TypeToken<List<HomePageImageUrl>>() {
+        TypeToken type = new TypeToken<List<ClassImager>>() {
         };
-        final GsonRequest<List<HomePageImageUrl>> request = new GsonRequest<List<HomePageImageUrl>>(UrlPath.CORPORATION_CLASS, type, new Response.Listener<List<HomePageImageUrl>>() {
+        final GsonRequest<List<ClassImager>> request = new GsonRequest<List<ClassImager>>(UrlPath.CORPORATION_CLASS, type, new Response.Listener<List<ClassImager>>() {
             @Override
-            public void onResponse(List<HomePageImageUrl> response) {
+            public void onResponse(final List<ClassImager> response) {
                 if (response.get(0).getList().size() > 0) {
-                    PersionalServiceAdapter adapter = new PersionalServiceAdapter(getActivity(), response.get(0).getList());
+                    PersionalServiceAdapter1 adapter = new PersionalServiceAdapter1(getActivity(), response.get(0).getList());
                     rvPersionalserviceThem.setAdapter(adapter);
+
+                    adapter.setClickListener(new HomePageAdapter.OnItemClickListener() {
+                        @Override
+                        public void onClick(View view, int position) {
+                            Intent intent = new Intent(getActivity(), GrbsActivity.class);
+                            intent.putExtra("titleId", response.get(0).getList().get(position).getOrgId());
+                            intent.putExtra("flag", "法人");
+                            intent.putExtra("title","部门");
+                            startActivity(intent);
+                        }
+                    });
                 }
             }
         }, new Response.ErrorListener() {

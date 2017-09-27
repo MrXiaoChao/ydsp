@@ -178,7 +178,7 @@ public class MyAppealActivity extends BaseActivity implements SwipeRefreshLayout
         progressDialog.show();
     }
 
-    
+
     private void cancelProgress() {
         progressDialog.dismiss();
     }

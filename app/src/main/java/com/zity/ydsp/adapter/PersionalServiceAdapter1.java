@@ -5,57 +5,57 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.zity.ydsp.R;
+import com.zity.ydsp.bean.ClassImager;
 import com.zity.ydsp.bean.HomePageImageUrl;
 
 import java.util.List;
 
 /**
  * Created by luochao on 2017/9/19.
+ * 个人办事 法人办事 适配器
  */
 
-public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ViewHolder> {
-
+public class PersionalServiceAdapter1 extends RecyclerView.Adapter<PersionalServiceAdapter1.ViewHolder> {
     private Context context;
-    private List<HomePageImageUrl.ListBean> list;
-    private OnItemClickListener clickListener;
+    private List<ClassImager.ListBean> list;
+    private HomePageAdapter.OnItemClickListener clickListener;
 
-    public HomePageAdapter(Context context, List<HomePageImageUrl.ListBean> list) {
+    public PersionalServiceAdapter1(Context context, List<ClassImager.ListBean> list) {
         this.context = context;
         this.list = list;
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_homepageimage, null));
+        return new ViewHolder(LayoutInflater.from(context).inflate(R.layout.item_case_them, null));
     }
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.tvHomepageTitle.setText(list.get(position).getName());
-        Glide.with(context).load(list.get(position).getUrl()).error(R.drawable.hjsf).into(holder.ivHomePageUrl);
+        holder.tvPersionalThem.setText(list.get(position).getName());
+        Glide.with(context).load("").error(R.drawable.hjsf).into(holder.ivPersionalThem);
     }
 
     @Override
     public int getItemCount() {
-        return list.size() != 0 ? list.size() : 0;
+        return list.size();
     }
 
     class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        private TextView tvHomepageTitle;
-        private ImageView ivHomePageUrl;
+        private final ImageView ivPersionalThem;
+        private final TextView tvPersionalThem;
 
         public ViewHolder(View itemView) {
             super(itemView);
-            tvHomepageTitle = (TextView) itemView.findViewById(R.id.tv_homepage_title);
-            ivHomePageUrl = (ImageView) itemView.findViewById(R.id.iv_homepage_url);
+            ivPersionalThem = (ImageView) itemView.findViewById(R.id.iv_persional_them);
+            tvPersionalThem = (TextView) itemView.findViewById(R.id.tv_persional_them);
             LinearLayout ll_image = (LinearLayout) itemView.findViewById(R.id.ll_image);
             ll_image.setOnClickListener(this);
         }
@@ -67,8 +67,7 @@ public class HomePageAdapter extends RecyclerView.Adapter<HomePageAdapter.ViewHo
             }
         }
     }
-
-    public void setClickListener(OnItemClickListener clickListener) {
+    public void setClickListener(HomePageAdapter.OnItemClickListener clickListener) {
         this.clickListener = clickListener;
     }
 

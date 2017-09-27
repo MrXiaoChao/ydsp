@@ -1,14 +1,16 @@
 package com.zity.ydsp.fragment;
 
+import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.annotation.IdRes;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import com.android.volley.Request;
 import com.android.volley.Response;
@@ -31,6 +33,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import butterknife.BindView;
+import butterknife.ButterKnife;
 import butterknife.OnClick;
 import butterknife.Unbinder;
 
@@ -70,6 +73,9 @@ public class PersonallyRegisterFragment extends BaseFragment {
     Button btnSecurityCode;
 
     Unbinder unbinder;
+    @BindView(R.id.et_yzbm)
+    EditText etYzbm;
+    Unbinder unbinder1;
 
     private String gender;
     private CountDownTimer timer = new CountDownTimer(30000, 1000) {
@@ -115,7 +121,7 @@ public class PersonallyRegisterFragment extends BaseFragment {
 
     //从服务器获取数据
     private void getDataFromService(String username, String password, String repassword, String name, String gender,
-                                    String id_num, String email, String address, String phone, String phone_yzm) {
+                                    String id_num, String email, String address, String phone, String phone_yzm,String yzbm) {
         Map<String, String> map = new HashMap<>();
         map.put("username", username);
         map.put("password", password);
@@ -127,6 +133,7 @@ public class PersonallyRegisterFragment extends BaseFragment {
         map.put("address", address);
         map.put("phone", phone);
         map.put("phone_yzm", phone_yzm);
+        map.put("postcode",yzbm);
         GsonRequest<Success> request = new GsonRequest<Success>(Request.Method.POST, map, UrlPath.PERSION_REGISTER, Success.class, new Response.Listener<Success>() {
             @Override
             public void onResponse(Success response) {
@@ -163,7 +170,7 @@ public class PersonallyRegisterFragment extends BaseFragment {
                 String address = etAddress.getText().toString().trim();
                 String phone = etPhonenumber.getText().toString().trim();
                 String phone_yzm = etConfirmCode.getText().toString().trim();
-
+                String yzbm = etYzbm.getText().toString().trim();
                 if (EmptyUtils.isEmpty(username)) {
                     ToastUtils.showShortToast("用户名不能为空");
                     etUsername.requestFocus();
@@ -218,6 +225,11 @@ public class PersonallyRegisterFragment extends BaseFragment {
                     etAddress.requestFocus();
                     return;
                 }
+                if (EmptyUtils.isEmpty(yzbm)) {
+                    ToastUtils.showShortToast("邮政编码不能为空");
+                    etYzbm.requestFocus();
+                    return;
+                }
                 if (EmptyUtils.isEmpty(phone)) {
                     ToastUtils.showShortToast("手机号不能为空");
                     etPhonenumber.requestFocus();
@@ -233,14 +245,9 @@ public class PersonallyRegisterFragment extends BaseFragment {
                     etConfirmCode.requestFocus();
                     return;
                 }
-                getDataFromService(username, password, repassword, name, gender, id_num, email, address, phone, phone_yzm);
+                getDataFromService(username, password, repassword, name, gender, id_num, email, address, phone, phone_yzm,yzbm);
                 break;
         }
     }
 
-    @Override
-    public void onDestroyView() {
-        super.onDestroyView();
-        timer.cancel();
-    }
 }

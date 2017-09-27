@@ -6,10 +6,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.zity.ydsp.R;
+import com.zity.ydsp.bean.ClassImager;
 import com.zity.ydsp.bean.HomePageImageUrl;
 
 import java.util.List;
@@ -23,6 +25,7 @@ import java.util.zip.Inflater;
 public class PersionalServiceAdapter extends RecyclerView.Adapter<PersionalServiceAdapter.ViewHolder> {
     private Context context;
     private List<HomePageImageUrl.ListBean> list;
+    private HomePageAdapter.OnItemClickListener clickListener;
 
     public PersionalServiceAdapter(Context context, List<HomePageImageUrl.ListBean> list) {
         this.context = context;
@@ -37,7 +40,7 @@ public class PersionalServiceAdapter extends RecyclerView.Adapter<PersionalServi
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         holder.tvPersionalThem.setText(list.get(position).getName());
-        Glide.with(context).load(list.get(position).getUrl()).error(R.drawable.hjsf).into(holder.ivPersionalThem);
+        Glide.with(context).load("").error(R.drawable.hjsf).into(holder.ivPersionalThem);
     }
 
     @Override
@@ -45,7 +48,7 @@ public class PersionalServiceAdapter extends RecyclerView.Adapter<PersionalServi
         return list.size();
     }
 
-    class ViewHolder extends RecyclerView.ViewHolder {
+    class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
         private final ImageView ivPersionalThem;
         private final TextView tvPersionalThem;
@@ -54,6 +57,23 @@ public class PersionalServiceAdapter extends RecyclerView.Adapter<PersionalServi
             super(itemView);
             ivPersionalThem = (ImageView) itemView.findViewById(R.id.iv_persional_them);
             tvPersionalThem = (TextView) itemView.findViewById(R.id.tv_persional_them);
+            LinearLayout ll_image = (LinearLayout) itemView.findViewById(R.id.ll_image);
+            ll_image.setOnClickListener(this);
+        }
+
+        @Override
+        public void onClick(View v) {
+            if (clickListener != null) {
+                clickListener.onClick(itemView, getAdapterPosition());
+            }
         }
     }
+    public void setClickListener(HomePageAdapter.OnItemClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+
+    public static interface OnItemClickListener {
+        void onClick(View view, int position);
+    }
+
 }
